@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import store from "../store/configureStore";
 import { changeContent } from "../store/actions";
 
@@ -10,10 +10,13 @@ const ConfigurationMenu = (props) => {
     const [carGear, setCarGear] = useState({});
 
     const data = {
-        type: carType,
-        engine: carEngine,
-        gearBox: carGear
+        typeName: carType,
+        engineName: carEngine,
+        gearBoxName: carGear
     }
+    useEffect(() => {
+        store.dispatch(changeContent(data))
+    });
 
     return(
         <div className="confMenu">
@@ -30,7 +33,7 @@ const ConfigurationMenu = (props) => {
             }
             {
                 carData.gearbox === undefined ? " " : carData.gearbox.map(gear => (
-                    <button onClick={() => {setCarGear(gear); store.dispatch(changeContent(data))}}>{gear}</button>
+                    <button key={gear.id} onClick={() => {setCarGear(gear)}}>{gear.type}</button>
                 ))
             }
             </div>

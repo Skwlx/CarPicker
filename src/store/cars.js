@@ -1,111 +1,140 @@
+import { v4 as uuidv4 } from 'uuid';
 const cars = {
     model: [
         {
             name: "PRO RS3",
             price: 300,
-            id: 1,
+            id: uuidv4(),
             engine: [
                 { 
                     name: "5.2L 532BHP",
-                    id: 5,
+                    id: uuidv4(),
                     price: 100
                 },
                 {
                     name: "4.2L 443BHP",
-                    id: 6,
+                    id: uuidv4(),
                     price: 70
                 },
                 {
                     name: "3.6L 374BHP",
-                    id: 7,
+                    id: uuidv4(),
                     price: 50  
                 },
                 {
                     name: "2.0L 166BHP",
-                    id: 8,
+                    id: uuidv4(),
                     price: 20
                 }
             ],
             gearbox: [
-                "Automatic"
+                  {
+                      type: "Automatic",
+                      id: uuidv4(),
+                      price: 60
+                  }
             ]
         },
         {
             name: "UBER RS3",
             price: 200,
-            id: 2,
+            id: uuidv4(),
             engine: [
                 { 
                     name: "5.2L 532BHP",
-                    id: 5,
+                    id: uuidv4(),
                     price: 100
                 },
                 {
                     name: "4.2L 443BHP",
-                    id: 6,
+                    id: uuidv4(),
                     price: 70
                 },
                 {
                     name: "3.6L 374BHP",
-                    id: 7,
+                    id: uuidv4(),
                     price: 50  
                 },
                 {
                     name: "2.0L 166BHP",
-                    id: 8,
+                    id: uuidv4(),
                     price: 20
                 }
             ],
             gearbox: [
-                "Manual",
-                "Automatic"
+                {
+                  type: "Manual",
+                  id: uuidv4(),
+                  price: 30
+                },
+                {
+                    type: "Automatic",
+                    id: uuidv4(),
+                    price: 60
+                }
             ]
         },
         {
             name: "STANDARD",
             price: 100,
-            id: 3,
+            id: uuidv4(),
             engine: [
                 { 
                     name: "5.2L 532BHP",
-                    id: 5,
+                    id: uuidv4(),
                     price: 100
                 },
                 {
                     name: "4.2L 443BHP",
-                    id: 6,
+                    id: uuidv4(),
                     price: 70
                 },
                 {
                     name: "3.6L 374BHP",
-                    id: 7,
+                    id: uuidv4(),
                     price: 50  
                 },
                 {
                     name: "2.0L 166BHP",
-                    id: 8,
+                    id: uuidv4(),
                     price: 20
                 }
             ],
             gearbox: [
-                "Manual",
-                "Automatic"
+                {
+                    type: "Manual",
+                    id: uuidv4(),
+                    price: 30
+                  },
+                  {
+                    type: "Automatic",
+                    id: uuidv4(),
+                    price: 60
+                  }
             ]
         },
         {
             name: "WK",
             price: 50,
-            id: 4,
+            id: uuidv4(),
             engine: [
                 {
                     name: "2.0L 166BHP",
-                    id: 8,
+                    id: uuidv4(),
                     price: 20
                 }
             ],
             gearbox: [
-                "Manual",
-                "Automatic"
+                {
+                    type: "Manual",
+                    id: uuidv4(),
+                    price: 30
+                  },
+                  {
+                    type: "Automatic",
+                    id: uuidv4(),
+                    price: 60
+                  }
             ]
         }
     ]
