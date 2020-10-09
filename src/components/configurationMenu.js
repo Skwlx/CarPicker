@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import store from "../store/configureStore";
 import { changeContent } from "../store/actions";
 
+import "../styles/configurationMenu.scss"
+
 const ConfigurationMenu = (props) => {
     
     const [carData, setCarData] = useState([]);
@@ -19,7 +21,9 @@ const ConfigurationMenu = (props) => {
     });
 
     return(
-        <div className="confMenu">
+        <div className="configMenu">
+            <div className="configMenu-carType">
+                <h3>Car type:</h3>
             {
                 props.cars.model.map( car => (
                     <button key={car.id} onClick={() => {
@@ -31,12 +35,15 @@ const ConfigurationMenu = (props) => {
                     </button>
                 ))
             }
-            <div>
+            </div>
+            <div className="configMenu-carEngine">
             {
                 carData.engine === undefined ? " " : carData.engine.map(eng => (
                     <button key={eng.id} onClick={() => {setCarEngine({engine: eng.name, price: eng.price})}}>{eng.name}</button>
                 ))
             }
+            </div>
+            <div className="configMenu-carGearBox">
             {
                 carData.gearbox === undefined ? " " : carData.gearbox.map(gear => (
                     <button key={gear.id} onClick={() => {setCarGear(gear)}}>{gear.type}</button>

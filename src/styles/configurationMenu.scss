@@ -1,0 +1,30 @@
+// CONFIGURATION MENU ANIMATIONS
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+// CONFIGURATION MENU STYLES
+.configMenu{
+    text-align: center;
+    margin-top: 30px;
+    button{
+        border: 1px solid #000000;
+        border-radius: 30px;
+        background-color: #fff;
+        padding: 15px;
+        margin: 10px;
+        font-size: 1.1rem;
+        transition: .2s ease;
+        animation: appear .5s ease-in;
+        &:hover{
+            background-color: #D0D0D0;
+            transform: scale(1.1);
+        }
+    }
+}
