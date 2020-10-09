@@ -1,25 +1,36 @@
 import React, { useState } from "react";
+import store from "../store/configureStore";
+import { changeContent } from "../store/actions";
 
 const ConfigurationMenu = (props) => {
     
-    const [carInfo, setCarInfo] = useState([]);
+    const [carData, setCarData] = useState([]);
+    const [carType, setCarType] = useState({});
+    const [carEngine, setCarEngine] = useState({});
+    const [carGear, setCarGear] = useState({});
+
+    const data = {
+        type: carType,
+        engine: carEngine,
+        gearBox: carGear
+    }
 
     return(
         <div className="confMenu">
             {
                 props.cars.model.map( car => (
-                    <button key={car.id} onClick={() => { setCarInfo( { engine: [...car.engine], gearbox: [...car.gearbox]})}}>{car.name}</button>
+                    <button key={car.id} onClick={() => {setCarType({type: car.name, price: car.price}); setCarData( { engine: [...car.engine], gearbox: [...car.gearbox]})}}>{car.name}</button>
                 ))
             }
             <div>
             {
-                carInfo.engine === undefined ? " " : carInfo.engine.map(eng => (
-                    <button key={eng.id}>{eng.name} {console.log(eng.id)}</button>
+                carData.engine === undefined ? " " : carData.engine.map(eng => (
+                    <button key={eng.id} onClick={() => {setCarEngine({engine: eng.name, price: eng.price})}}>{eng.name}</button>
                 ))
             }
             {
-                carInfo.gearbox === undefined ? " " : carInfo.gearbox.map(gear => (
-                    <button>{gear}</button>
+                carData.gearbox === undefined ? " " : carData.gearbox.map(gear => (
+                    <button onClick={() => {setCarGear(gear); store.dispatch(changeContent(data))}}>{gear}</button>
                 ))
             }
             </div>
@@ -28,5 +39,3 @@ const ConfigurationMenu = (props) => {
 }
 
 export default ConfigurationMenu;
-
-
