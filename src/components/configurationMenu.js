@@ -22,7 +22,13 @@ const ConfigurationMenu = (props) => {
         <div className="confMenu">
             {
                 props.cars.model.map( car => (
-                    <button key={car.id} onClick={() => {setCarType({type: car.name, price: car.price}); setCarData( { engine: [...car.engine], gearbox: [...car.gearbox]})}}>{car.name}</button>
+                    <button key={car.id} onClick={() => {
+                        setCarType({type: car.name, price: car.price}); 
+                        setCarData( { engine: [...car.engine], gearbox: [...car.gearbox]})
+                        setCarEngine("");
+                        setCarGear("")}}>
+                    {car.name}
+                    </button>
                 ))
             }
             <div>

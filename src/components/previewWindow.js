@@ -4,8 +4,6 @@ import store from "../store/configureStore";
 
 const PreviewWindow = () => {
     const [currentData, setCurrentData] = useState({});
-
-
     useEffect(() =>{
         const render = () => {setCurrentData(store.getState())}
         store.subscribe(render);
