@@ -9,31 +9,67 @@ const cars = {
                 { 
                     name: "5.2L 532BHP",
                     id: uuidv4(),
-                    price: 100
+                    price: 100,
+                    gearbox: [
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 },
                 {
                     name: "4.2L 443BHP",
                     id: uuidv4(),
-                    price: 70
+                    price: 70,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 },
                 {
                     name: "3.6L 374BHP",
                     id: uuidv4(),
-                    price: 50  
+                    price: 50,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]  
                 },
                 {
                     name: "2.0L 166BHP",
                     id: uuidv4(),
-                    price: 20
+                    price: 20,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 }
             ],
-            gearbox: [
-                  {
-                      type: "Automatic",
-                      id: uuidv4(),
-                      price: 60
-                  }
-            ]
         },
         {
             name: "UBER RS3",
@@ -43,34 +79,65 @@ const cars = {
                 { 
                     name: "5.2L 532BHP",
                     id: uuidv4(),
-                    price: 100
+                    price: 100,
+                    gearbox: [
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 },
                 {
                     name: "4.2L 443BHP",
                     id: uuidv4(),
-                    price: 70
+                    price: 70,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 },
                 {
                     name: "3.6L 374BHP",
                     id: uuidv4(),
-                    price: 50  
+                    price: 50,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]  
                 },
                 {
                     name: "2.0L 166BHP",
                     id: uuidv4(),
-                    price: 20
-                }
-            ],
-            gearbox: [
-                {
-                  type: "Manual",
-                  id: uuidv4(),
-                  price: 30
-                },
-                {
-                    type: "Automatic",
-                    id: uuidv4(),
-                    price: 60
+                    price: 20,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 }
             ]
         },
@@ -82,35 +149,66 @@ const cars = {
                 { 
                     name: "5.2L 532BHP",
                     id: uuidv4(),
-                    price: 100
+                    price: 100,
+                    gearbox: [
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 },
                 {
                     name: "4.2L 443BHP",
                     id: uuidv4(),
-                    price: 70
+                    price: 70,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 },
                 {
                     name: "3.6L 374BHP",
                     id: uuidv4(),
-                    price: 50  
+                    price: 50,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]  
                 },
                 {
                     name: "2.0L 166BHP",
                     id: uuidv4(),
-                    price: 20
+                    price: 20,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
                 }
-            ],
-            gearbox: [
-                {
-                    type: "Manual",
-                    id: uuidv4(),
-                    price: 30
-                  },
-                  {
-                    type: "Automatic",
-                    id: uuidv4(),
-                    price: 60
-                  }
             ]
         },
         {
@@ -121,21 +219,21 @@ const cars = {
                 {
                     name: "2.0L 166BHP",
                     id: uuidv4(),
-                    price: 20
-                }
+                    price: 20,
+                    gearbox: [
+                        {
+                          type: "Manual",
+                          id: uuidv4(),
+                          price: 30
+                        },
+                        {
+                            type: "Automatic",
+                            id: uuidv4(),
+                            price: 60
+                        }
+                    ]
+                },
             ],
-            gearbox: [
-                {
-                    type: "Manual",
-                    id: uuidv4(),
-                    price: 30
-                  },
-                  {
-                    type: "Automatic",
-                    id: uuidv4(),
-                    price: 60
-                  }
-            ]
         }
     ]
 }

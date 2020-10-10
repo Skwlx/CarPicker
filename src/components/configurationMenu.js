@@ -28,7 +28,7 @@ const ConfigurationMenu = (props) => {
                 props.cars.model.map( car => (
                     <button key={car.id} onClick={() => {
                         setCarType({type: car.name, price: car.price}); 
-                        setCarData( { engine: [...car.engine], gearbox: [...car.gearbox]})
+                        setCarData( { engine: [...car.engine] });
                         setCarEngine("");
                         setCarGear("")}}>
                     {car.name}
@@ -39,13 +39,16 @@ const ConfigurationMenu = (props) => {
             <div className="configMenu-carEngine">
             {
                 carData.engine === undefined ? " " : carData.engine.map(eng => (
-                    <button key={eng.id} onClick={() => {setCarEngine({engine: eng.name, price: eng.price})}}>{eng.name}</button>
+                    <button key={eng.id} onClick={() => {
+                        setCarEngine({engine: eng.name, price: eng.price})
+                        setCarData({ engine: [...carData.engine], gearBox: [...eng.gearbox]})}}>
+                        {eng.name}</button>
                 ))
             }
             </div>
             <div className="configMenu-carGearBox">
             {
-                carData.gearbox === undefined ? " " : carData.gearbox.map(gear => (
+                carData.gearBox === undefined ? " " : carData.gearBox.map(gear => (
                     <button key={gear.id} onClick={() => {setCarGear(gear)}}>{gear.type}</button>
                 ))
             }

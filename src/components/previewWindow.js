@@ -32,7 +32,7 @@ const PreviewWindow = () => {
                 <FontAwesomeIcon className="previewWindow-carIcon" icon={faCar} />
             </div>
         <ul className="previewWindow-carData">
-            <li>{carType === undefined ? "" : <h3>Car type: </h3>}{carType}</li>
+            <li>{carType === undefined ? "" : <h3>Model: </h3>}{carType}</li>
             <li>{engineType === undefined ? "" : <h3>Engine: </h3>}{engineType}</li>
             <li>{gearBoxType === undefined ? "" : <h3>GearBox: </h3>}{gearBoxType}</li>
             <li>{price === 0 ? "" : <h3>Price: </h3>}{price}$</li>
