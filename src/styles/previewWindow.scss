@@ -10,12 +10,15 @@
     text-align: center;
     padding: 0;
     li{
-        margin: 15px;
+        margin: 10px;
+        font-size: 0.9rem;
+        font-weight: 100;
         &:last-child{
             font-style: italic;
         }
         h3{
             display: inline;
+            color: $textColor;
         }
     }
 }
@@ -26,6 +29,7 @@
 }
 
 .previewWindow-carIcon{
+    background-color: $baseColor;
     text-align: center;
     font-size: 8rem;
     transition: .3s ease-in;

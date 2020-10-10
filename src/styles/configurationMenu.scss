@@ -16,9 +16,9 @@
 
 
 // CONFIGURATION MENU STYLES
+
 .configMenu{
     text-align: center;
-    margin-top: 10px;
     button{
         border: 1px solid #000000;
         border-radius: 30px;
@@ -31,9 +31,16 @@
         &:hover{
             background-color: $baseColor;
             transform: scale(1.1);
+            color: white;
         }
     }
     h2{
-        color: darken($baseColor, 10%);
+        color: $textColor;
     }
+}
+
+.configMenu-boxTitle{
+    margin: 5px auto 5px auto;
+    animation: appear .5s ease-in;
+    color: $textColor;
 }

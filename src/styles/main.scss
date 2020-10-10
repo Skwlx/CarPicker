@@ -1,3 +1,10 @@
+// IMPORTS 
+
+@import "./variables.scss";
+
+// MAIN STYLES
+ 
 html{
+    background-color: lighten($baseColor, 5%);
     font-family: sans-serif;
 }
