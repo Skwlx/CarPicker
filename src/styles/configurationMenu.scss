@@ -1,3 +1,7 @@
+// IMPORTS
+
+@import "./variables.scss";
+
 // CONFIGURATION MENU ANIMATIONS
 @keyframes appear{
     0%{
@@ -8,11 +12,13 @@
     }
 }
 
+// I'm not using so many classes becasue there is no need to style individual elements so often in this project
+
 
 // CONFIGURATION MENU STYLES
 .configMenu{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
     button{
         border: 1px solid #000000;
         border-radius: 30px;
@@ -23,8 +29,11 @@
         transition: .2s ease;
         animation: appear .5s ease-in;
         &:hover{
-            background-color: #D0D0D0;
+            background-color: $baseColor;
             transform: scale(1.1);
         }
+    }
+    h2{
+        color: darken($baseColor, 10%);
     }
 }

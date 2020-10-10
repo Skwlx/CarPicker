@@ -22,8 +22,8 @@ const ConfigurationMenu = (props) => {
 
     return(
         <div className="configMenu">
+        <h2>CAR CONFIG</h2>
             <div className="configMenu-carType">
-                <h3>Car type:</h3>
             {
                 props.cars.model.map( car => (
                     <button key={car.id} onClick={() => {

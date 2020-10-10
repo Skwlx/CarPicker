@@ -1,3 +1,7 @@
+// IMPORTS
+
+@import "./variables.scss";
+
 // PREVIEWWINDOW STYLES
 
 .previewWindow-carData{
@@ -7,6 +11,12 @@
     padding: 0;
     li{
         margin: 15px;
+        &:last-child{
+            font-style: italic;
+        }
+        h3{
+            display: inline;
+        }
     }
 }
 
@@ -19,4 +29,7 @@
     text-align: center;
     font-size: 8rem;
     transition: .3s ease-in;
+    padding: 15px;
+    border: 2px solid $baseColor;
+    border-radius: 30px;
 }
