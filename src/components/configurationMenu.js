@@ -73,11 +73,10 @@ const ConfigurationMenu = (props) => {
             }
             </div>
             <div className="configMenu-carColor">
-            {console.log(data.gearBoxName)}
             {
                 carGear !== "" ?
                 props.cars.colors.map(color => (
-                    <button onClick={() => {setCarColor(color)}} style={{backgroundColor:color.hexVal, borderColor: color.hexVal}}></button>
+                    <button key={color.id} onClick={() => {setCarColor(color)}} style={{backgroundColor:color.hexVal, borderColor: color.hexVal}}></button>
                     // Setting only color data
                 ))
                 : ""

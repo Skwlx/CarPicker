@@ -30,7 +30,7 @@
         animation: appear .3s ease-in;
         &:hover{
             background-color: $baseColor;
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-4px);
             color: white;
         }
         &:focus{

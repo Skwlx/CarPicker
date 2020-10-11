@@ -181,19 +181,23 @@ const cars = {
     colors:[
         {
             name: "Blue",
-            hexVal: "#1e11d9"
+            hexVal: "#1e11d9",
+            id: uuidv4()
         },
         {
             name: "Red",
-            hexVal: "#f50b0b"
+            hexVal: "#f50b0b",
+            id: uuidv4()
         },
         {
             name: "White",
-            hexVal: "#ffffff"
+            hexVal: "#ffffff",
+            id: uuidv4()
         },
         {
             name: "Black",
-            hexVal: "#000000"
+            hexVal: "#000000",
+            id: uuidv4()
         }
     ]
 }
