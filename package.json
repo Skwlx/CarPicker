@@ -1,7 +1,8 @@
 {
   "name": "carpicker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "Paweł Sławuta",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",

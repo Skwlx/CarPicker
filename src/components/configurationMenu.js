@@ -13,7 +13,7 @@ const ConfigurationMenu = (props) => {
     // data const and send it to the global state
     const [carType, setCarType] = useState({});
     const [carEngine, setCarEngine] = useState({});
-    const [carGear, setCarGear] = useState({});
+    const [carGear, setCarGear] = useState("");
     const [color, setCarColor] = useState({})
 
     // This const will be sent to the global state, so PreviewWindow component
@@ -56,6 +56,7 @@ const ConfigurationMenu = (props) => {
                         setCarEngine({engine: eng.name, price: eng.price}); // Save the information about clicked car model
                         setCarData({ engine: [...carData.engine], gearBox: [...eng.gearbox]}); // Save all avaliable engines and gearboxes
                         // We need to use spread operator for the engines once again, because data will be lost if we won't do that
+                        setCarGear(""); // We need to reset the gearBox type
                     }}>
                     {eng.name}
                     </button>
@@ -72,11 +73,15 @@ const ConfigurationMenu = (props) => {
             }
             </div>
             <div className="configMenu-carColor">
+            {console.log(data.gearBoxName)}
             {
+                carGear !== "" ?
                 props.cars.colors.map(color => (
                     <button onClick={() => {setCarColor(color)}} style={{backgroundColor:color.hexVal, borderColor: color.hexVal}}></button>
                     // Setting only color data
                 ))
+                : ""
+                // This buttons will be displayed if the gear will be set
             }
             </div>
         </div>
