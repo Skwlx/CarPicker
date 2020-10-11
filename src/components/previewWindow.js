@@ -7,10 +7,9 @@ import "../styles/previewWindow.scss";
 
 const PreviewWindow = () => {
 
-    const [currentData, setCurrentData] = useState({}); // Current data from global state
+    const [currentData, setCurrentData] = useState({});                             // Current data from global state
     
-    // Data that will be used to display information to the user
-    const [carType, setCarType] = useState([]);
+    const [carType, setCarType] = useState([]);                                     // Data that will be used to display information to the user
     const [engineType, setEngineType] = useState([])
     const [gearBoxType, setGearBoxType] = useState([])
     const [price, setPrice] = useState(0);
@@ -20,7 +19,7 @@ const PreviewWindow = () => {
         const render = () => {setCurrentData(store.getState())}
         store.subscribe(render);
         if(currentData.content !== undefined){
-            // Price will be set to 0 if the data won't be delivered
+            
             let typePrice = currentData.content.typeName.price || 0;
             let enginePrice = currentData.content.engineName.price || 0;
             let gearBoxPrice = currentData.content.gearBoxName.price || 0;

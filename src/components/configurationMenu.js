@@ -7,7 +7,7 @@ import "../styles/configurationMenu.scss"
 const ConfigurationMenu = (props) => {
 
     // This state is used to store data from the props, so we can display the buttons and user picks
-    const [carData, setCarData] = useState([]);
+    const [carData, setCarData] = useState([]);         
 
     // This states are used to save the data user picked in order to save them in to the 
     // data const and send it to the global state
@@ -26,7 +26,8 @@ const ConfigurationMenu = (props) => {
     }
 
     useEffect(() => {
-        // Every change will be recognized and sent to global state
+
+    // Every change will be recognized and sent to global state
         store.dispatch(changeContent(data));
     });
 
@@ -38,10 +39,10 @@ const ConfigurationMenu = (props) => {
             {
                 props.cars.model.map( car => (
                     <button key={car.id} onClick={() => {
-                        setCarType({type: car.name, price: car.price}); // Save the information about clicked car model
-                        setCarData( { engine: [...car.engine] }); // Saving all avaliable engines for this car model
-                        setCarEngine(""); // Reseting the stored data in order to display a new one
-                        setCarGear(""); // Another reset
+                        setCarType({type: car.name, price: car.price});                         // Save the information about clicked car model
+                        setCarData( { engine: [...car.engine] });                               // Saving all avaliable engines for this car model
+                        setCarEngine("");                                                       // Reseting the stored data in order to display a new one
+                        setCarGear("");                                                         // Another reset
                     }}>
                     {car.name}
                     </button>
@@ -53,10 +54,10 @@ const ConfigurationMenu = (props) => {
             {
                 carData.engine === undefined ? " " : carData.engine.map(eng => (
                     <button key={eng.id} onClick={() => {
-                        setCarEngine({engine: eng.name, price: eng.price}); // Save the information about clicked car model
-                        setCarData({ engine: [...carData.engine], gearBox: [...eng.gearbox]}); // Save all avaliable engines and gearboxes
+                        setCarEngine({engine: eng.name, price: eng.price});                     // Save the information about clicked car model
+                        setCarData({ engine: [...carData.engine], gearBox: [...eng.gearbox]});  // Save all avaliable engines and gearboxes
                         // We need to use spread operator for the engines once again, because data will be lost if we won't do that
-                        setCarGear(""); // We need to reset the gearBox type
+                        setCarGear("");                                                         // We need to reset the gearBox type
                     }}>
                     {eng.name}
                     </button>
@@ -77,10 +78,10 @@ const ConfigurationMenu = (props) => {
                 carGear !== "" ?
                 props.cars.colors.map(color => (
                     <button key={color.id} onClick={() => {setCarColor(color)}} style={{backgroundColor:color.hexVal, borderColor: color.hexVal}}></button>
-                    // Setting only color data
+                                                                                                // Setting only color data
                 ))
                 : ""
-                // This buttons will be displayed if the gear will be set
+                                                                                                // This buttons will be displayed if the gear will be set
             }
             </div>
         </div>
