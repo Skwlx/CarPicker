@@ -12,9 +12,6 @@
     }
 }
 
-// I'm not using so many classes becasue there is no need to style individual elements so often in this project
-
-
 // CONFIGURATION MENU STYLES
 
 .configMenu{
@@ -36,6 +33,7 @@
     }
     h2{
         color: $textColor;
+        animation: appear .5s ease-in;
     }
 }
 
@@ -43,4 +41,14 @@
     margin: 5px auto 5px auto;
     animation: appear .5s ease-in;
     color: $textColor;
+}
+
+@media (max-width: 420px){
+    .configMenu{
+        button{
+            font-size: 0.9rem;
+            padding: 15px;
+            margin: 10px;
+        }
+    }
 }

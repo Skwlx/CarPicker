@@ -4,3 +4,4 @@ export const changeContent = (data) => {
       data
  }
 }
+// We will need only one action to change the state of the application

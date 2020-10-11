@@ -1,4 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
+
+// Hardcoded data that will be used in app.
+
 const cars = {
     model: [
         {

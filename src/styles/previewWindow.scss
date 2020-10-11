@@ -2,7 +2,21 @@
 
 @import "./variables.scss";
 
-// PREVIEWWINDOW STYLES
+// PREVIEW WINDOW ANIMATIONS
+
+@keyframes displayIn {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+// PREVIEW WINDOW STYLES
 
 .previewWindow-carData{
     list-style: none;
@@ -13,6 +27,7 @@
         margin: 10px;
         font-size: 0.9rem;
         font-weight: 100;
+        animation: displayIn .5s ease-in;
         &:last-child{
             font-style: italic;
         }
@@ -31,9 +46,10 @@
 .previewWindow-carIcon{
     background-color: $baseColor;
     text-align: center;
-    font-size: 8rem;
+    font-size: 6rem;
     transition: .3s ease-in;
     padding: 15px;
     border: 2px solid $baseColor;
     border-radius: 30px;
+    animation: displayIn .3s ease-in;
 }
